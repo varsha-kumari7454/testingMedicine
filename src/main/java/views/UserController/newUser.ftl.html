@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup </title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto|Big+Shoulders+Display|Noto+Serif|Roboto+Slab|Source
++Sans+Pro|Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        
+        .heading{
+            background-color: rgb(29, 29, 75);
+            max-width:100%;
+            height:75px;
+        }
+        .heading h1{
+            color:#FDC632;
+            text-align: center;
+            
+            font:30px 'Source Sans Pro',sans-serif;
+            line-height: 75px;
+            
+        }
+        .heading h1 i{
+            color: white;
+            font-size: 25px;
+        
+        }
+        .subcontainer{
+            display: flex;
+            width:100%;
+            margin-bottom: 15px;
+        }
+        
+        .inputs{
+            border:10px solid #FDC632;
+            max-width: 100%;
+            padding:75px 75px;
+            
+        }
+        label i.fa{
+           padding: 10px;
+  background: rgba(0,0,0,0.5);
+  color: black;
+  min-width: 20px;
+  text-align: center;
+        }
+        .field {
+  width: 100%;
+  padding: 8px;
+  outline: none;
+}
+        .field:focus {
+  border: 2px solid rgba(0,0,0,0.5);
+}
+        .butn{
+            padding: 15px 30px;
+            background-color: dodgerblue;
+            outline: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color:white;
+            font:20px "Noto Sans",serif;
+            letter-spacing: 1px;
+            
+        }
+	select{
+		color:grey;
+	}
+	option{
+	color:black;
+	}
+        
+	.jump{
+		float:right;
+		font-size:20px;
+		position:relative;
+		top:-40px;
+	}
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading"><h1><i class="fa fa-pencil" aria-hidden="true"></i> Register</h1></div>
+        <div class="inputs">
+            <form id="userForm" action="/user/new" method="post">
+               <@authenticityForm/>
+               <div class="subcontainer">
+                <label for="name"><i class="fa fa-user" aria-hidden="true"></i></label>
+                   <input type="text" id="name" class="field" name="name" placeholder="Full Name" required></div><br>
+                   <div class="subcontainer">
+                <label for="email"><i class="fa fa-envelope" aria-hidden="true"></i></label>
+                       <input type="email" class="field" id="email" name="email" placeholder="Email" required></div><br>
+                       <div class="subcontainer">
+                <label for="username"><i class="fa fa-mobile" aria-hidden="true"></i></label>
+                               <input type="text" class="field" id="username" name="username" placeholder="UserName"></div><br>
+                       <div class="subcontainer">
+                <label for="password"><i class="fa fa-lock" aria-hidden="true"></i></label>
+                           <input type="password" class="field" id="password" name="password" placeholder="Password" required></div><br>
+                           
+                <br>
+                <input class="butn" type="submit" value="Register" name="register" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="butn" type="button" value="Cancel" onclick="location.href='/index'">&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    
+                                
+                
+                 
+            </form>
+		<span class="jump"><a href="/login">Click here</a> for Login.</span>
+        </div>
+        
+    </div>
+</body>
+</html>
